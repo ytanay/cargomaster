@@ -1,0 +1,38 @@
+{
+    "name": "Cargomaster",
+    "description": "Intelligent, fast and reliable asset management for Express on Node.js",
+    "homepage": "http://dev.paticon.com/proj/Cargomaster",
+    "version": "0.1.0",
+    "main": "index",
+    "private": false,
+    
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha -R spec"
+    },
+
+    "engines" : {
+        "node" : "*"
+    },
+
+    "dependencies": {
+        "async": "*",
+        "aws-sdk": "*",
+        "walk": "*",
+        "uglify-js": "*",
+        "yuicompressor": "*",
+        "winston": "*"
+    },
+
+    "devDependencies": {
+        "should": "*",
+        "supertest": "*"
+    },
+
+    "author": {
+        "name": "Yotam Tanay",
+        "email": "yotam@paticon.com",
+        "url": "people.paticon.com/yotam"
+    }
+}
+
