@@ -1,1 +1,1 @@
-module.exports = require('./lib/pushfront');
+module.exports = require('./lib/cargomaster');

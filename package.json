@@ -1,7 +1,7 @@
 {
-    "name": "Cargomaster",
+    "name": "cargomaster",
     "description": "Intelligent, fast and reliable asset management for Express on Node.js",
-    "homepage": "http://dev.paticon.com/proj/Cargomaster",
+    "homepage": "http://dev.paticon.com/proj/cargomaster",
     "version": "0.1.0",
     "main": "index",
     "private": false,
@@ -20,8 +20,12 @@
         "aws-sdk": "*",
         "walk": "*",
         "uglify-js": "*",
-        "yuicompressor": "*",
-        "winston": "*"
+        "yuicompressor": "*"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ytanay/cargomaster.git"
     },
 
     "devDependencies": {
