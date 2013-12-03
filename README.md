@@ -3,7 +3,24 @@ cargomaster (formerly assetmaster)
 
 Cargomaster is an intelligent, fast, effecient and reliable asset manager for Node.js.
 
-It will **group, concat, minify, optimize, compress and bundle** your static assets. It will version them and store them. It will upload the bundles to [AWS S3]() (or a different service of your choice), and serve them through [CloudFront]() (or a different CDN of your choice). It will automatically bring in libaries ([jQuery](http://jquery.com), [AngularJS](), [Bootstrap](), and so on) from any location you want (Google's CDN, yours, you name it) so you don't have to mess with local copies. 
+It will **group, concat, minify, optimize, compress and bundle** your static assets. It will version them and store them. It will upload the bundles to [AWS S3]() (or a different service of your choice), and serve them through [CloudFront]() (or a different CDN of your choice). It will automatically bring in libaries ([jQuery](http://jquery.com), [AngularJS](), [Bootstrap](), and so on) from any location you want ([Google's CDN](), yours, you name it) so you don't have to mess with local copies. 
+
+Index
+-----
+
+- [What is Cargomaster?](#what-is-cargomaster)
+- [What does it do?](#what-does-it-do)
+- [Benefits](#benefits)
+- [Extra features](#more-features)
+- [The Pipeline](#the-pipeline)
+- [The Helpers](#the-helpers)
+- [Asset Types](#asset-types)
+- [CDN deployment](#cdn-deployment)
+- [Guide](#guide)
+- [About](#about)
+
+Before we start...
+------------------
 
 Tell me it isn't... easier on the eyes.
 
@@ -27,6 +44,7 @@ html
     script(src='/assets/scripts/application/master_41bb19eb6892.min.js')
     script(src='/assets/scripts/application/login_page_48b054a7dd44.min.js')
 ```
+3... 2.. 1.. **cargomaster**!
 
 ```js
 //jade with cargomaster
@@ -40,20 +58,6 @@ html
     != cargo.image('login/customer_service')
     != cargo.scripts(['jquery@1.9.1', 'bootstrap@3.0.0', 'bundle'])
 ```
-    
-Index
------
-
-- [What is Cargomaster?](#what)
-- [What does it do?](#what-does-it-do)
-- [Benefits](#benefits)
-- [Extra features](#more-features)
-- [The Pipeline](#the-pipeline)
-- [The Helpers](#the-helpers)
-- [Asset Types](#asset-types)
-- [CDN deployment](#cdn-deployment)
-- [Guide](#guide)
-- [About](#about)
 
 What is Cargomaster?
 --------------------
@@ -61,6 +65,14 @@ Managing static assets for your website or service is not particularly difficult
 
 It's just mind blowingly annoying and confusing.
 
+There are a few packages that will minify your assets, and another one which will also bundle them, and yet another one which automatically uploads the processed assets to a CDN.
+
+These packages are excellent in their own right, but they don't provide the bridge necessary to make them into a full asset managment solution. Attempting to patch them together is extremely cumbersome. argomaster attempts to solve this problem by providing a higly customizable, all in one module that is extremely transparent.
+
+What does it do?
+----------------
+
+Cargomaster provides 2 linked components; a [pipeline](#the-pipeline) and a [set of helpers](#the-helpers).
 ### Case in point: ###
 
 This is bad:
