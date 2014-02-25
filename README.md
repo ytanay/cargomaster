@@ -130,3 +130,6 @@ In production, the pipeline goes all out. Here is the general flow of things:
 3. If the bundle needs to be recreated, call the appropriate handler for the bundle type. For example, if the javascript bundle needs to be recreated, cargomaster will look for *.js* files in the source directory, concat them, run them through the engine of your choice ([Closure Compiler](https://developers.google.com/closure/compiler/), [UglifyJS](https://github.com/mishoo/UglifyJS2), [YUI Compressor](http://yui.github.io/yuicompressor/), etc.)
 
 More info (along with the working version) real soon!
+
+## License
+Copyright (c) 2014 Yotam Tanay. Licensed under the MIT license.
