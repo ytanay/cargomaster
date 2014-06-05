@@ -22,7 +22,7 @@ Index
 Before we start...
 ------------------
 
-Tell me it isn't... easier on the eyes.
+Cargomaster attempts to be... easier on the eyes.
 
 ```js
 //jade
@@ -129,7 +129,7 @@ In production, the pipeline goes all out. Here is the general flow of things:
 2. Scan the *'src'* directory for asset files, and compare timestamps to see if the bundle should be regenrated.
 3. If the bundle needs to be recreated, call the appropriate handler for the bundle type. For example, if the javascript bundle needs to be recreated, cargomaster will look for *.js* files in the source directory, concat them, run them through the engine of your choice ([Closure Compiler](https://developers.google.com/closure/compiler/), [UglifyJS](https://github.com/mishoo/UglifyJS2), [YUI Compressor](http://yui.github.io/yuicompressor/), etc.)
 
-More info (along with the working version) real soon!
+Proper documentation coming... soon?
 
 ## License
 Copyright (c) 2014 Yotam Tanay. Licensed under the MIT license.
